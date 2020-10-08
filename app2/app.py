@@ -1,5 +1,5 @@
 import paho.mqtt.client as mqtt
-import requests, time, json
+import requests, time
 
 print('Connecting to an MQTT client...')
 
