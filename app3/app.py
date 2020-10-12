@@ -3,8 +3,8 @@ import requests, time, json
 
 def on_message(client, userdata, message):
   try:
-    print(f'\nReceiving data from the MQTT client...')
-    INDEX_NUMBERS = [254287, 254000]
+    print(f'Receiving data from the MQTT client...')
+    INDEX_NUMBERS = [254287, 254286]
     time = json.loads(message.payload.decode('utf-8'))
     data = {
       'students': INDEX_NUMBERS,

@@ -14,7 +14,7 @@ while True:
   data = request.text.strip()
   print(data)
   print('Publishing JSON string data to the MQTT client...')
-  client.publish('time/timezone/qRfgP1o', data)
+  client.publish('time/timezone/qRfgP1o', data) # topic with a key so as not to collide with other scripts
   time.sleep(5)
 client.loop_stop()
 
