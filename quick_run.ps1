@@ -9,7 +9,7 @@ invoke-expression 'cmd /c start powershell -Command {
   py app.py;
 }'
 
-start-sleep -s 2
+start-sleep -s 0.5
 
 invoke-expression 'cmd /c start powershell -Command {
   .\venv\Scripts\activate.ps1;
@@ -17,7 +17,7 @@ invoke-expression 'cmd /c start powershell -Command {
   py app.py;
 }'
 
-start-sleep -s 2
+start-sleep -s 0.5
 
 invoke-expression 'cmd /c start powershell -Command {
   .\venv\Scripts\activate.ps1;
