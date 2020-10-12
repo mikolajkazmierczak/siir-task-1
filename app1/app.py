@@ -12,7 +12,7 @@ class Time(Resource):
 
     print('\nReceiving GET request...')
     parser = reqparse.RequestParser()
-    parser.add_argument('tz')
+    parser.add_argument('tz', type=int)
     args = parser.parse_args()
     print(args)
 
@@ -21,7 +21,7 @@ class Time(Resource):
       # add or subtract hours from time in the current timezone
       # (typing a '+' before the number is irrelevant because maths)
       # (typing a '-' before the number will make it negative)
-      time = time + datetime.timedelta(hours=int(hours_offset))
+      time = time + datetime.timedelta(hours=hours_offset)
     time = time.time().replace(microsecond=0)
 
     print('Returning JSON data...')
